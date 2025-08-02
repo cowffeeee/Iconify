@@ -15,6 +15,7 @@
         <package android:name="com.maxmpz.audioplayer" />
         <package android:name="code.name.monkey.retromusic" />
         <package android:name="com.awedea.nyx" />
+        <package android:name="com.aspiro.tidal" />
         <package android:name="com.kapp.youtube.final" />
         <package android:name="com.shadow.blackhole" />
         <package android:name="in.krosbits.musicolet" />

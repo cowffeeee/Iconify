@@ -148,6 +148,13 @@ class MediaIcons : BaseFragment() {
             )
             add(
                 arrayOf(
+                    "com.aspiro.tidal",
+                    false,
+                    R.id.tidal
+                )
+            )
+            add(
+                arrayOf(
                     "com.awedea.nyx",
                     false,
                     R.id.nyx
