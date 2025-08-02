@@ -633,12 +633,12 @@ class HeaderClockA14(context: Context) : ModPack(context) {
             null
         }
 
-        setMargins(mQsHeaderClockContainer, mContext, 0, topMargin, 0, 0)
+        setMargins(mQsHeaderClockContainer, mContext, 0, topMargin, 0, bottomMargin)
 
         if (TextUtilsCompat.getLayoutDirectionFromLocale(Locale.getDefault()) == View.LAYOUT_DIRECTION_RTL) {
-            setMargins(clockView, mContext, 0, 0, sideMargin, 0)
+            setMargins(clockView, mContext, 0, 0, sideMargin, bottomMargin)
         } else {
-            setMargins(clockView, mContext, sideMargin, 0, 0, 0)
+            setMargins(clockView, mContext, sideMargin, 0, 0, bottomMargin)
         }
 
         findViewWithTagAndChangeColor(clockView, "accent1", accent1)
