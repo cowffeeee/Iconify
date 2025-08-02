@@ -45,35 +45,6 @@
     </com.drdisagree.iconify.ui.preferences.PreferenceCategory>
 
     <com.drdisagree.iconify.ui.preferences.PreferenceCategory
-        android:key="updateSettings"
-        android:title="@string/settings_section_title_update"
-        app:iconSpaceReserved="true"
-        search:ignore="true">
-
-        <com.drdisagree.iconify.ui.preferences.PreferenceMenu
-            android:icon="@drawable/ic_check_update"
-            android:key="checkForUpdatePref"
-            android:title="@string/settings_check_for_update"
-            app:fragment="com.drdisagree.iconify.ui.fragments.settings.AppUpdates"
-            app:showArrow="false" />
-
-        <com.drdisagree.iconify.ui.preferences.SwitchPreference
-            android:icon="@drawable/ic_auto_update"
-            android:key="IconifyAutoUpdate"
-            android:summary="@string/settings_auto_update_desc"
-            android:title="@string/settings_auto_update_title"
-            app:defaultValue="true" />
-
-        <com.drdisagree.iconify.ui.preferences.SwitchPreference
-            android:icon="@drawable/ic_auto_update_wifi_only"
-            android:key="IconifyUpdateOverWifi"
-            android:summary="@string/settings_auto_update_desc_wifi_only"
-            android:title="@string/settings_auto_update_title_wifi_only"
-            app:defaultValue="true" />
-
-    </com.drdisagree.iconify.ui.preferences.PreferenceCategory>
-
-    <com.drdisagree.iconify.ui.preferences.PreferenceCategory
         android:key="miscSettings"
         android:title="@string/settings_section_title_miscellaneous"
         app:iconSpaceReserved="true"
@@ -136,12 +107,6 @@
             android:title="@string/settings_telegram_group_title"
             app:showArrow="false" />
 
-        <com.drdisagree.iconify.ui.preferences.PreferenceMenu
-            android:icon="@drawable/ic_translate"
-            android:key="iconifyTranslate"
-            android:summary="@string/settings_translate_desc"
-            android:title="@string/settings_translate_title"
-            app:showArrow="false" />
 
         <com.drdisagree.iconify.ui.preferences.PreferenceMenu
             android:icon="@drawable/ic_credits"
