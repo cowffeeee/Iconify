@@ -7,8 +7,8 @@ blurview = "version-2.0.6"
 circleindicator = "2.1.6"
 collapsingtoolbarlayoutSubtitle = "1.5.0"
 colorpickerVersion = "1.1.0"
-commonsText = "1.13.1"
-concurrentFutures = "1.2.0"
+commonsText = "1.14.0"
+concurrentFutures = "1.3.0"
 constraintlayout = "2.2.1"
 coreKtx = "1.16.0"
 coreSplashscreen = "1.0.1"
@@ -24,15 +24,15 @@ jsoup = "1.21.1"
 kotlin = "2.2.0"
 kotlinxCoroutinesAndroid = "1.10.2"
 ksp = "2.2.0-2.0.2"
-library = "8.11.0"
+library = "8.12.0"
 libsuVersion = "6.0.0"
 lottie = "6.6.7"
 material = "1.12.0"
-navigationUiKtx = "2.9.1"
-navigationFragmentKtx = "2.9.1"
+navigationUiKtx = "2.9.3"
+navigationFragmentKtx = "2.9.3"
 parcelize = "2.2.0"
 paletteKtx = "1.0.0"
-playServicesBase = "18.7.1"
+playServicesBase = "18.7.2"
 preferenceKtx = "1.2.1"
 recyclerviewSelection = "1.2.0"
 recyclerview = "1.4.0"
@@ -40,7 +40,7 @@ remotepreferences = "0.8"
 roomVersion = "2.7.2"
 slf4jApi = "2.0.17"
 viewpager2 = "1.1.0"
-workRuntime = "2.10.2"
+workRuntime = "2.10.3"
 xposedbridge = "main-SNAPSHOT"
 zip4j = "2.11.5"
 
@@ -79,7 +79,7 @@ kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutine
 library = { module = "com.android.databinding:library", version.ref = "library" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
-okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version = "4.12.0" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version = "5.1.0" }
 play-services-base = { module = "com.google.android.gms:play-services-base", version.ref = "playServicesBase" }
 remotepreferences = { module = "com.crossbowffs.remotepreferences:remotepreferences", version.ref = "remotepreferences" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomVersion" }
