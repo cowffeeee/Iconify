@@ -43,6 +43,7 @@ import com.drdisagree.iconify.data.common.Preferences.QS_TOPMARGIN_LANDSCAPE
 import com.drdisagree.iconify.data.common.Preferences.QS_TOPMARGIN_PORTRAIT
 import com.drdisagree.iconify.data.common.Preferences.SELECTED_QS_TEXT_COLOR
 import com.drdisagree.iconify.data.common.Preferences.VERTICAL_QSTILE_SWITCH
+// import com.drdisagree.iconify.data.common.Preferences.BRIGHTNESS_SLIDER_LOCATION
 import com.drdisagree.iconify.xposed.ModPack
 import com.drdisagree.iconify.xposed.modules.extras.utils.DisplayUtils.isLandscape
 import com.drdisagree.iconify.xposed.modules.extras.utils.DisplayUtils.isNightMode
@@ -99,6 +100,7 @@ class QuickSettings(context: Context) : ModPack(context) {
     private var blurMediaPlayerArtworkRadius = 15f
     private var showHeaderClock = false
     private var showOpQsHeaderView = false
+//    private var brightnessSliderOnBottom = false
 
     override fun updatePrefs(vararg key: String) {
         Xprefs.apply {
@@ -126,6 +128,8 @@ class QuickSettings(context: Context) : ModPack(context) {
                 getSliderInt(BLUR_MEDIA_PLAYER_ARTWORK_RADIUS, 60) / 100f * 25f
             isPixelVariant = getIsPixelVariant()
             showOpQsHeaderView = getBoolean(OP_QS_HEADER_SWITCH, false)
+        //   brightnessSliderOnBottom = getBoolean(BRIGHTNESS_SLIDER_LOCATION, false)
+
         }
 
         triggerQsElementVisibility()
@@ -139,6 +143,7 @@ class QuickSettings(context: Context) : ModPack(context) {
         manageQsElementVisibility()
         compactMediaPlayer()
         blurMediaPlayerArtwork()
+    //    moveBrightnessSlider()
     }
 
     private fun setVerticalTiles() {
@@ -289,6 +294,75 @@ class QuickSettings(context: Context) : ModPack(context) {
                 }
         }
     }
+
+ /* private fun moveBrightnessSlider() {
+
+            val brightnessSliderView=
+                findClass("$SYSTEMUI_PACKAGE.settings.brightness.BrightnessSliderView")
+            val brightnessSliderController=
+                findClass("$SYSTEMUI_PACKAGE.settings.brightness.BrightnessSliderController")
+            val brightnessSliderMargin =
+                findClass("$SYSTEMUI_PACKAGE.qs.QSPanel")
+
+
+            brightnessSliderMargin
+                .hookMethod("setBrightnessView")
+                .runAfter { param ->
+
+                    try {
+                        val view = param.thisObject.getField(
+                            "addView"
+                        ) as Int
+                        param.thisObject.setField(
+                            "mBrightnessView",
+                            view + 2
+                        )
+
+
+                    } catch (throwable: Throwable) {
+                        log(this@QuickSettings, throwable)
+                    }
+                }
+
+                brightnessSliderMargin
+                .hookMethod("setBrightnessViewMargin")
+                .runAfter { param ->
+                    if (!brightnessSliderOnBottom) return@runAfter
+
+                    try {
+                        val res = mContext.resources
+
+                        val lp = param.thisObject
+                            .getField("mBrightnessView")
+                            .callMethod("getLayoutParams") as MarginLayoutParams
+                        val top = mContext.resources.getDimensionPixelSize(
+                            res.getIdentifier(
+                                "qs_brightness_margin_top",
+                                "dimen",
+                                mContext.packageName
+                            )
+                        )
+                        val bottom = mContext.resources.getDimensionPixelSize(
+                            res.getIdentifier(
+                                "qs_brightness_margin_bottom",
+                                "dimen",
+                                mContext.packageName
+                            )
+                        )
+
+                        lp.topMargin = bottom
+                        lp.bottomMargin = top
+
+                        param.thisObject
+                            .setField("mBrightnessView",lp
+                            )
+                    } catch (throwable: Throwable) {
+                        log(this@QuickSettings, throwable)
+                    }
+                }
+
+    }
+*/
 
     private fun fixQsTileAndLabelColorA14() {
         initQsAccentColor()

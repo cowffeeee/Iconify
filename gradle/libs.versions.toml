@@ -1,5 +1,5 @@
 [versions]
-agp = "8.11.0"
+agp = "8.12.0"
 appcompat = "1.7.1"
 #noinspection NewerVersionAvailable,GradleDependency
 bcpkixJdk18on = "1.78.1"

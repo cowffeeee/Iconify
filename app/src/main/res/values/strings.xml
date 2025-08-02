@@ -487,8 +487,6 @@
     <string name="activity_title_xposed_others">Others</string>
     <string name="activity_desc_xposed_others">Miscellaneous xposed tweaks</string>
     <string name="activity_title_xposed_weather_settings">Weather Settings</string>
-    <string name="activity_title_xposed_launcher">Launcher</string>
-    <string name="activity_desc_xposed_launcher">Launcher related modifications</string>
     <string name="activity_title_lockscreen_album_art">Media Album Art</string>
 
     <!-- Oneplus QS Header -->
@@ -633,6 +631,8 @@
     <string name="hide_qs_silent_text_desc">Hide silent text shown as header of silent notifications</string>
     <string name="hide_qs_footer_buttons_title">Hide Footer Buttons</string>
     <string name="hide_qs_footer_buttons_desc">Hide footer buttons shown under notification stack</string>
+  <!--  <string name="brightness_slider_bottom_title">Move Brightness Slider to the Bottom</string>
+    <string name="brightness_slider_bottom_desc">Brightness slider below tiles</string>-->
 
     <!-- Xposed Battery Style -->
     <string name="battery_style_title">Battery Style</string>
@@ -1290,6 +1290,8 @@
     <string name="update">Update</string>
     <string name="enable_title">Enable</string>
     <string name="update_interval_title">Update interval</string>
+    <string name="interval_15_min">15 minutes</string>
+    <string name="interval_30_min">30 minutes</string>
     <string name="interval_1_hour">1 hour</string>
     <string name="interval_2_hour">2 hours</string>
     <string name="interval_4_hour">4 hours</string>

@@ -266,6 +266,7 @@ object Preferences {
     const val NOTIFICATION_HEADSUP_BLUR = "xposed_notificationsheadsupblur"
     const val NOTIFICATION_HEADSUP_BLUR_RADIUS = "xposed_notificationsheadsupblurradius"
     const val NOTIFICATION_HEADSUP_TRANSPARENCY = "xposed_notificationsheadsuptransparency"
+ //   const val BRIGHTNESS_SLIDER_LOCATION = "xposed_brightsliderlocation"
 
     // Xposed view tags
     const val ICONIFY_HEADER_CLOCK_TAG = "iconify_header_clock"

@@ -259,6 +259,11 @@
         <item name="android:fontFamily">@font/consolas</item>
     </style>
 
+    <style name="ChicagoFontTextAppearance">
+        <item name="fontFamily">@font/chicago </item>
+        <item name="android:fontFamily">@font/chicago  </item>
+    </style>
+
     <!-- Weather -->
     <style name="WeatherBaseText" parent="TextAppearance.Material3.BodyMedium">
         <item name="android:textColor">@android:color/white</item>

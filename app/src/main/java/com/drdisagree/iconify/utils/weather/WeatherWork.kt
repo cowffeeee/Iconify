@@ -259,9 +259,9 @@ class WeatherWork(val mContext: Context, workerParams: WorkerParameters) :
         private const val EXTRA_ERROR = "error"
 
         private const val LOCATION_ACCURACY_THRESHOLD_METERS = 10000f
-        private const val OUTDATED_LOCATION_THRESHOLD_MILLIS = 10L * 60L * 1000L // 10 minutes
+        private const val OUTDATED_LOCATION_THRESHOLD_MILLIS = 500L * 60L * 10L // 10 minutes
         private const val RETRY_DELAY_MS = 5000
-        private const val RETRY_MAX_NUM = 5
+        private const val RETRY_MAX_NUM = 50
 
         private val executor: ExecutorService = Executors.newSingleThreadExecutor()
         private val dayFormat = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.US)

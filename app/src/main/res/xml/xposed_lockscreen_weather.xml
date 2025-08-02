@@ -10,7 +10,7 @@
         android:title="@string/lockscreen_weather_title" />
 
     <com.drdisagree.iconify.ui.preferences.ListPreference
-        android:defaultValue="2"
+        android:defaultValue="60"
         android:dependency="weather_switch"
         android:entries="@array/update_interval_entries"
         android:entryValues="@array/update_interval_values"

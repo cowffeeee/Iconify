@@ -72,6 +72,13 @@
             android:title="@string/custom_qs_margin_title"
             app:iconSpaceReserved="false" />
 
+
+    <!--   <com.drdisagree.iconify.ui.preferences.SwitchPreference
+            android:key="xposed_brightsliderlocation"
+            android:summary="@string/brightness_slider_bottom_desc"
+            android:title="@string/brightness_slider_bottom_title"
+            app:iconSpaceReserved="false" />
+        -->
     </com.drdisagree.iconify.ui.preferences.PreferenceCategory>
 
     <com.drdisagree.iconify.ui.preferences.PreferenceCategory

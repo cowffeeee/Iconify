@@ -46,37 +46,7 @@
     </string-array>
 
     <string-array name="locale_code" translatable="false">
-        <item>af-ZA</item>
-        <item>ar-SA</item>
-        <item>ca-ES</item>
-        <item>zh-CN</item>
-        <item>zh-TW</item>
-        <item>cs-CZ</item>
-        <item>da-DK</item>
-        <item>nl-NL</item>
         <item>en-US</item>
-        <item>fi-FI</item>
-        <item>fr-FR</item>
-        <item>de-DE</item>
-        <item>el-GR</item>
-        <item>hu-HU</item>
-        <item>id-ID</item>
-        <item>it-IT</item>
-        <item>ja-JP</item>
-        <item>ko-KR</item>
-        <item>no-NO</item>
-        <item>fa-IR</item>
-        <item>pl-PL</item>
-        <item>pt-PT</item>
-        <item>pt-BR</item>
-        <item>ro-RO</item>
-        <item>ru-RU</item>
-        <item>sr-SP</item>
-        <item>es-ES</item>
-        <item>sv-SE</item>
-        <item>tr-TR</item>
-        <item>uk-UA</item>
-        <item>vi-VN</item>
     </string-array>
 
     <string-array name="app_icon">
@@ -185,6 +155,8 @@
 
     <!-- Lockscreen Weather Update Interval -->
     <string-array name="update_interval_entries" translatable="false">
+        <item>@string/interval_15_min</item>
+        <item>@string/interval_30_min</item>
         <item>@string/interval_1_hour</item>
         <item>@string/interval_2_hour</item>
         <item>@string/interval_4_hour</item>
@@ -193,11 +165,13 @@
     </string-array>
 
     <string-array name="update_interval_values">
-        <item>1</item>
-        <item>2</item>
-        <item>4</item>
-        <item>6</item>
-        <item>12</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>120</item>
+        <item>240</item>
+        <item>360</item>
+        <item>720</item>
     </string-array>
 
     <!-- Lockscreen Weather Provider -->
