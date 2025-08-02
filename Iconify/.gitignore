@@ -1,0 +1,17 @@
+*.iml
+*.jks
+.gradle
+.idea
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/app/release
+/app/debug
+/app/standard
+/app/foss
+/build
+crowdin.properties
+keystore.properties
+/.kotlin/sessions/kotlin-compiler-*.salive
