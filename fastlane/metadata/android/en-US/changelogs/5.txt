@@ -5,7 +5,6 @@ Feature Changes:
 • All overlays are now a little bit more colorful.
 • Added Volume Panel customization. (only works if your rom has thin volume panel by default)
 • Added QS Media Player icon packs. Supported music players:
->> Tidal
 >> Poweramp Music Player
 >> Retro Music Player
 >> Nyx Music Player

@@ -202,13 +202,6 @@ class MediaIcons : BaseFragment() {
                     R.id.yt_music_revanced
                 )
             )
-            add(
-                arrayOf(
-                    "com.aspiro.tidal",
-                    false,
-                    R.id.tidal
-                )
-            )
         }
     }
 
