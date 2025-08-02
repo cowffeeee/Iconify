@@ -540,9 +540,9 @@ class HeaderClock(context: Context) : ModPack(context) {
         }
 
         if (TextUtilsCompat.getLayoutDirectionFromLocale(Locale.getDefault()) == View.LAYOUT_DIRECTION_RTL) {
-            setMargins(clockView, mContext, 0, topMargin, sideMargin, 0)
+            setMargins(clockView, mContext, 0, topMargin, sideMargin, bottomMargin)
         } else {
-            setMargins(clockView, mContext, sideMargin, topMargin, 0, 0)
+            setMargins(clockView, mContext, sideMargin, topMargin, 0, bottomMargin)
         }
 
         findViewWithTagAndChangeColor(clockView, "accent1", accent1)
