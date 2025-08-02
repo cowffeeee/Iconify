@@ -148,13 +148,6 @@ class MediaIcons : BaseFragment() {
             )
             add(
                 arrayOf(
-                    "com.aspiro.tidal",
-                    false,
-                    R.id.tidal
-                )
-            )
-            add(
-                arrayOf(
                     "com.awedea.nyx",
                     false,
                     R.id.nyx
@@ -207,6 +200,13 @@ class MediaIcons : BaseFragment() {
                     "app.revanced.android.apps.youtube.music",
                     false,
                     R.id.yt_music_revanced
+                )
+            )
+            add(
+                arrayOf(
+                    "com.aspiro.tidal",
+                    false,
+                    R.id.tidal
                 )
             )
         }
