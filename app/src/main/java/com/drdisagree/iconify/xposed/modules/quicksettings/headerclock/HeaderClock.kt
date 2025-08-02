@@ -46,6 +46,7 @@ import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_SIDEMARGIN
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_STYLE
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_SWITCH
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_TOPMARGIN
+import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN
 import com.drdisagree.iconify.data.common.Preferences.ICONIFY_HEADER_CLOCK_TAG
 import com.drdisagree.iconify.data.common.Resources
 import com.drdisagree.iconify.data.common.XposedConst.HEADER_CLOCK_FONT_FILE
@@ -120,6 +121,7 @@ class HeaderClock(context: Context) : ModPack(context) {
                     key[0] == HEADER_CLOCK_FONT_SWITCH ||
                     key[0] == HEADER_CLOCK_SIDEMARGIN ||
                     key[0] == HEADER_CLOCK_TOPMARGIN ||
+                    key[0] == HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN ||
                     key[0] == HEADER_CLOCK_STYLE ||
                     key[0] == HEADER_CLOCK_CENTERED ||
                     key[0] == HEADER_CLOCK_FONT_TEXT_SCALING ||
@@ -451,12 +453,19 @@ class HeaderClock(context: Context) : ModPack(context) {
         }
 
     private fun modifyClockView(clockView: View) {
+        val config = mContext.resources.configuration
+
         val clockStyle: Int = Xprefs.getInt(HEADER_CLOCK_STYLE, 0)
         val customFontEnabled: Boolean = Xprefs.getBoolean(HEADER_CLOCK_FONT_SWITCH, false)
         val clockScale: Float =
             (Xprefs.getSliderInt(HEADER_CLOCK_FONT_TEXT_SCALING, 10) / 10.0).toFloat()
         val sideMargin: Int = Xprefs.getSliderInt(HEADER_CLOCK_SIDEMARGIN, 0)
         val topMargin: Int = Xprefs.getSliderInt(HEADER_CLOCK_TOPMARGIN, 8)
+        val bottomMargin: Int = if(config.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Xprefs.getSliderInt(HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN, 10)
+        } else {
+            0
+        }
 
         val customColorEnabled = Xprefs.getBoolean(HEADER_CLOCK_COLOR_SWITCH, false)
         var accent1: Int = mContext.resources.getColor(

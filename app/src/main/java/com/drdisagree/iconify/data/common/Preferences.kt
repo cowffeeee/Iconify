@@ -74,6 +74,7 @@ object Preferences {
     const val HEADER_CLOCK_SWITCH = "xposed_headerclock"
     const val HEADER_CLOCK_SIDEMARGIN = "xposed_headerclocksidemargin"
     const val HEADER_CLOCK_TOPMARGIN = "xposed_headerclocktopmargin"
+    const val HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN = "xposed_headerclockbottommargin"
     const val HEADER_CLOCK_CENTERED = "xposed_headerclockcentered"
     const val HEADER_CLOCK_LANDSCAPE_SWITCH = "xposed_headerclocklandscape"
     const val HEADER_CLOCK_STYLE = "xposed_headerclockstyle"

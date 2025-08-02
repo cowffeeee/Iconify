@@ -136,9 +136,21 @@
         app:defaultValue="8"
         app:iconSpaceReserved="false"
         app:maxVal="250"
+        app:minVal="-28"
+        app:tickInterval="1"
+        app:valueFormat="dp" />
+
+    <com.drdisagree.iconify.ui.preferences.SliderPreference
+        android:dependency="xposed_headerclock"
+        android:key="xposed_headerclockbottommargin"
+        android:title="@string/lockscreen_clock_bottom_margin_title"
+        app:defaultValue="10"
+        app:iconSpaceReserved="false"
+        app:maxVal="28"
         app:minVal="0"
         app:tickInterval="1"
         app:valueFormat="dp" />
+
 
     <com.drdisagree.iconify.ui.preferences.SliderPreference
         android:dependency="xposed_headerclock"

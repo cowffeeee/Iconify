@@ -46,6 +46,7 @@ import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_SIDEMARGIN
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_STYLE
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_SWITCH
 import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_TOPMARGIN
+import com.drdisagree.iconify.data.common.Preferences.HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN
 import com.drdisagree.iconify.data.common.Preferences.HIDE_STATUS_ICONS_SWITCH
 import com.drdisagree.iconify.data.common.Preferences.ICONIFY_HEADER_CLOCK_TAG
 import com.drdisagree.iconify.data.common.Preferences.ICONIFY_QS_HEADER_CONTAINER_SHADE_TAG
@@ -557,6 +558,8 @@ class HeaderClockA14(context: Context) : ModPack(context) {
         val sideMargin: Int = Xprefs.getSliderInt(HEADER_CLOCK_SIDEMARGIN, 0)
         val topMargin: Int =
             if (mContext.isLandscape) 0 else Xprefs.getSliderInt(HEADER_CLOCK_TOPMARGIN, 8)
+        val bottomMargin: Int =
+            if (!mContext.isLandscape) 0 else Xprefs.getSliderInt(HEADER_CLOCK_LANDSCAPE_BOTTOMMARGIN, 10)
 
         val customColorEnabled = Xprefs.getBoolean(HEADER_CLOCK_COLOR_SWITCH, false)
         var accent1: Int = mContext.resources.getColor(
